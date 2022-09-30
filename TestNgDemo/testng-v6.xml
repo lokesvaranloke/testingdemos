@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="HomeLoanAppTest">
+    <classes>
+    <class name="loanapp.HomeLoanAppTests">
+    	<methods>
+    		<exclude name="Web.*"></exclude>
+    	</methods>
+    </class>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="CarLoanAppTest">
+    <classes>
+      <class name="loanapp.CarLoanAppTests">
+      <methods>
+    		<exclude name="CarLoanLoginWeb"/>
+    		<exclude name="CarLoanLoginMobile"/>
+    	</methods>
+    </class>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="PersonalLoanAppTest">
+    <classes>
+      <class name="loanapp.PersonalLoanAppTests">
+      <methods>
+    		<exclude name="PersonalLoanLoginWeb"/>
+    		<exclude name="PersonalLoanLoginMobile"/>
+    	</methods>
+    </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
